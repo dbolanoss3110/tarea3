@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tarea #3</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- SweetAlert2 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Header con navegación responsive -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-success-subtle">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Mi Web</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./ejercicio01.html">Ejercicio #1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./ejercicio02.html">Ejercicio #2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./ejercicio03.html">Ejercicio #3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ejercicio #4</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ejercicio #5</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ejercicio #6</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ejercicio #7</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ejercicio #8</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ejercicio #9</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ejercicio #10</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container py-5 flex-grow-1">
+      <h2>Conversión de Divisas</h2>
+
+      <!-- Calculo #1: Dólares a colones -->
+      <div class="card p-3 mb-4">
+        <h4>Calculo #1: Dólares a Colones</h4>
+        <div class="mb-3">
+          <label for="montoDolares" class="form-label">Monto dólares $</label>
+          <input
+            type="number"
+            class="form-control"
+            id="montoDolares"
+            placeholder="Ingrese monto en dólares"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="tipoCambio1" class="form-label">Tipo de cambio</label>
+          <input
+            type="number"
+            class="form-control"
+            id="tipoCambio1"
+            placeholder="Ingrese tipo de cambio"
+          />
+        </div>
+        <button class="btn btn-warning m-auto col-6 " onclick="convertirADolares()">Convertir</button>
+        <button class="btn btn-secondary m-auto mt-2 col-6 " onclick="limpiarCampos1()">Limpiar</button>
+      </div>
+
+      <!-- Calculo #2: Colones a dólares -->
+      <div class="card p-3">
+        <h4>Calculo #2: Colones a Dólares</h4>
+        <div class="mb-3">
+          <label for="montoColones" class="form-label">Monto colones ₡</label>
+          <input
+            type="number"
+            class="form-control"
+            id="montoColones"
+            placeholder="Ingrese monto en colones"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="tipoCambio2" class="form-label">Tipo de cambio</label>
+          <input
+            type="number"
+            class="form-control"
+            id="tipoCambio2"
+            placeholder="Ingrese tipo de cambio"
+          />
+        </div>
+        <button class="btn btn-warning m-auto col-6" onclick="convertirAColones()">Convertir</button>
+        <button class="btn btn-secondary m-auto mt-2 col-6" onclick="limpiarCampos2()">Limpiar</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-success-subtle text-center py-3">
+      <p>&copy; 2025 Mi Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/ejercicio02.js"></script>
+  </body>
+</html>

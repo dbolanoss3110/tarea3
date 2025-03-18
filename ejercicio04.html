@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tarea #3</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- SweetAlert2 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Header con navegación responsive -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-success-subtle">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Mi Web</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./ejercicio01.html">Ejercicio #1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./ejercicio02.html">Ejercicio #2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./ejercicio03.html">Ejercicio #3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./ejercicio04.html">Ejercicio #4</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ejercicio #5</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ejercicio #6</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ejercicio #7</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ejercicio #8</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ejercicio #9</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ejercicio #10</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container py-5 flex-grow-1">
+      <h2 class="text-center">Observar lugares de Sudamérica</h2>
+
+      <!-- Dropdown para seleccionar el país -->
+      <div class="mb-3">
+        <label for="paisSelect" class="form-label">Escoge un lugar de Sudamérica</label>
+        <div class="dropdown">
+          <button
+            class="btn btn-primary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Selecciona un país
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li>
+              <a class="dropdown-item" href="#" onclick="mostrarLugar('argentina')">Argentina</a>
+            </li>
+            <li><a class="dropdown-item" href="#" onclick="mostrarLugar('brazil')">Brasil</a></li>
+            <li><a class="dropdown-item" href="#" onclick="mostrarLugar('chile')">Chile</a></li>
+            <li><a class="dropdown-item" href="#" onclick="mostrarLugar('peru')">Perú</a></li>
+            <li>
+              <a class="dropdown-item" href="#" onclick="mostrarLugar('colombia')">Colombia</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Descripción y imagen representativa -->
+      <div id="lugarDescripcion" class="text-center mt-4 ">
+        <h4 id="paisNombre"></h4>
+        <p id="descripcionPais"></p>
+        <img
+          id="imagenPais"
+          src=""
+          alt="Imagen del lugar"
+          class="img-fluid d-none"
+          style="max-width: 80%; border-radius: 10px"
+        />
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-success-subtle text-center py-3">
+      <p>&copy; 2025 Mi Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/ejercicio04.js"></script>
+  </body>
+</html>
