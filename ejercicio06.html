@@ -14,6 +14,7 @@
       href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/ejercicio06.css" />
   </head>
   <body class="d-flex flex-column min-vh-100">
     <!-- Header con navegación responsive -->
@@ -69,64 +70,77 @@
     </nav>
 
     <div class="container py-5 flex-grow-1">
-      <h2>Conversión de Divisas</h2>
-
-      <!-- Calculo #1: Dólares a colones -->
-      <div class="card p-3 mb-4">
-        <h4>Calculo #1: Dólares a Colones</h4>
-        <div class="mb-3">
-          <label for="montoDolares" class="form-label">Monto dólares $</label>
-          <input
-            type="number"
-            class="form-control"
-            id="montoDolares"
-            placeholder="Ingrese monto en dólares"
-          />
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="alert alert-info text-center" role="alert">
+            ¡Bienvenido a la selección de colores de carros! Elige el color que más te guste.
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="tipoCambio1" class="form-label">Tipo de cambio</label>
-          <input
-            type="number"
-            class="form-control"
-            id="tipoCambio1"
-            placeholder="Ingrese tipo de cambio"
-          />
-        </div>
-        <button class="btn btn-warning m-auto col-6" onclick="convertirADolares()">
-          Convertir
-        </button>
-        <button class="btn btn-secondary m-auto mt-2 col-6" onclick="limpiarCampos1()">
-          Limpiar
-        </button>
       </div>
 
-      <!-- Calculo #2: Colones a dólares -->
-      <div class="card p-3">
-        <h4>Calculo #2: Colones a Dólares</h4>
-        <div class="mb-3">
-          <label for="montoColones" class="form-label">Monto colones ₡</label>
-          <input
-            type="number"
-            class="form-control"
-            id="montoColones"
-            placeholder="Ingrese monto en colones"
-          />
+      <!-- Título y selección de color -->
+      <div class="row mb-4">
+        <div class="col-12 text-center">
+          <h1>Elige el color de tu modelo de carro</h1>
+          <p>Selecciona un color para ver cómo se ve en el carro.</p>
         </div>
-        <div class="mb-3">
-          <label for="tipoCambio2" class="form-label">Tipo de cambio</label>
-          <input
-            type="number"
-            class="form-control"
-            id="tipoCambio2"
-            placeholder="Ingrese tipo de cambio"
-          />
+      </div>
+
+      <!-- Selección de color (Bolitas) -->
+      <div class="row justify-content-center mb-4">
+        <div class="col-12 text-center">
+          <div class="color-selector">
+            <!-- Bolitas de colores -->
+            <input
+              type="radio"
+              id="colorAmarillo"
+              name="color"
+              value="amarillo"
+              onclick="cambiarColor()"
+            />
+            <label for="colorAmarillo" class="color-amarillo"></label>
+
+            <input type="radio" id="colorRojo" name="color" value="rojo" onclick="cambiarColor()" />
+            <label for="colorRojo" class="color-rojo"></label>
+
+            <input type="radio" id="colorAzul" name="color" value="azul" onclick="cambiarColor()" />
+            <label for="colorAzul" class="color-azul"></label>
+
+            <input
+              type="radio"
+              id="colorNegro"
+              name="color"
+              value="negro"
+              onclick="cambiarColor()"
+            />
+            <label for="colorNegro" class="color-negro"></label>
+
+            <input
+              type="radio"
+              id="colorBlanco"
+              name="color"
+              value="blanco"
+              onclick="cambiarColor()"
+            />
+            <label for="colorBlanco" class="color-blanco"></label>
+          </div>
         </div>
-        <button class="btn btn-warning m-auto col-6" onclick="convertirAColones()">
-          Convertir
-        </button>
-        <button class="btn btn-secondary m-auto mt-2 col-6" onclick="limpiarCampos2()">
-          Limpiar
-        </button>
+      </div>
+
+      <!-- Imagen del carro -->
+      <div class="row justify-content-center mt-4">
+        <div class="col-12 text-center">
+          <img id="carImage" src="./img/modelo.webp" alt="Carro" class="img-fluid" />
+        </div>
+      </div>
+
+      <!-- Botón de alerta -->
+      <div class="row justify-content-center mt-4">
+        <div class="col-12 text-center">
+          <button class="btn btn-primary" onclick="mostrarAlerta()">
+            Mostrar Color Seleccionado
+          </button>
+        </div>
       </div>
     </div>
 
@@ -137,6 +151,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/ejercicio02.js"></script>
+    <script src="./js/ejercicio06.js"></script>
   </body>
 </html>

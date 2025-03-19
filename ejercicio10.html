@@ -14,6 +14,10 @@
       href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body class="d-flex flex-column min-vh-100">
     <!-- Header con navegación responsive -->
@@ -69,64 +73,39 @@
     </nav>
 
     <div class="container py-5 flex-grow-1">
-      <h2>Conversión de Divisas</h2>
+      <div class="row">
+        <div class="col-12 text-center mb-4">
+          <h1>Buscador de Empleados</h1>
+        </div>
 
-      <!-- Calculo #1: Dólares a colones -->
-      <div class="card p-3 mb-4">
-        <h4>Calculo #1: Dólares a Colones</h4>
-        <div class="mb-3">
-          <label for="montoDolares" class="form-label">Monto dólares $</label>
+        <div class="col-12 mb-4">
+          <label for="cedula" class="form-label">Ingrese la cédula del empleado:</label>
           <input
-            type="number"
+            type="text"
+            id="cedula"
             class="form-control"
-            id="montoDolares"
-            placeholder="Ingrese monto en dólares"
+            placeholder="Ingrese la cédula del empleado"
           />
+          <button class="btn btn-primary mt-3" onclick="buscarEmpleado()">Buscar</button>
         </div>
-        <div class="mb-3">
-          <label for="tipoCambio1" class="form-label">Tipo de cambio</label>
-          <input
-            type="number"
-            class="form-control"
-            id="tipoCambio1"
-            placeholder="Ingrese tipo de cambio"
-          />
-        </div>
-        <button class="btn btn-warning m-auto col-6" onclick="convertirADolares()">
-          Convertir
-        </button>
-        <button class="btn btn-secondary m-auto mt-2 col-6" onclick="limpiarCampos1()">
-          Limpiar
-        </button>
-      </div>
 
-      <!-- Calculo #2: Colones a dólares -->
-      <div class="card p-3">
-        <h4>Calculo #2: Colones a Dólares</h4>
-        <div class="mb-3">
-          <label for="montoColones" class="form-label">Monto colones ₡</label>
-          <input
-            type="number"
-            class="form-control"
-            id="montoColones"
-            placeholder="Ingrese monto en colones"
-          />
+        <!-- Información del empleado -->
+        <div class="col-12 mt-4" id="informacionEmpleado" style="display: none">
+          <h2>Información del Empleado</h2>
+          <div id="resultadoEmpleado" class="row">
+            <div class="col-md-3">
+              <i class="fas fa-user-circle fa-10x"></i>
+            </div>
+            <div class="col-md-9">
+              <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+              <p><strong>Apellidos:</strong> <span id="apellidos"></span></p>
+              <p><strong>Lugar:</strong> <span id="lugar"></span></p>
+              <p><strong>Régimen:</strong> <span id="regimen"></span></p>
+              <p><strong>Año de Ingreso:</strong> <span id="anoIngreso"></span></p>
+              <p><strong>Departamento:</strong> <span id="departamento"></span></p>
+            </div>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="tipoCambio2" class="form-label">Tipo de cambio</label>
-          <input
-            type="number"
-            class="form-control"
-            id="tipoCambio2"
-            placeholder="Ingrese tipo de cambio"
-          />
-        </div>
-        <button class="btn btn-warning m-auto col-6" onclick="convertirAColones()">
-          Convertir
-        </button>
-        <button class="btn btn-secondary m-auto mt-2 col-6" onclick="limpiarCampos2()">
-          Limpiar
-        </button>
       </div>
     </div>
 
@@ -137,6 +116,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/ejercicio02.js"></script>
+    <script src="./js/ejercicio10.js"></script>
   </body>
 </html>
